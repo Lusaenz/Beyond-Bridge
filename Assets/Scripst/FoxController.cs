@@ -97,6 +97,8 @@ public class FoxController : MonoBehaviour
         // Verificamos si hay una colisión cerca del punto de Ground Check (un área circular).
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
+
+   
     private void Jump()
     {
         if (isGrounded)
