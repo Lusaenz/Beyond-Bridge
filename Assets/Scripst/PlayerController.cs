@@ -34,7 +34,10 @@ public class PlayerController : MonoBehaviour
         playerRb.velocity = new Vector2(movementX * speed, playerRb.velocity.y);
 
         // Controlar animaciones
-        animator.SetFloat("Speed", Mathf.Abs(movementX));
+        bool Speed = Mathf.Abs(movementX) > 0.1f;
+        animator.SetBool("Speed", Speed);
+
+        Debug.Log("Speed: " + Speed);
 
         if (movementX > 0)
         {
@@ -59,14 +62,14 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        float extraHeight = 0.1f; //  margen para mejor detección
+        float extraHeight = 0.1f; //  margen
         RaycastHit2D hit = Physics2D.Raycast(playerCollider.bounds.center, Vector2.down, playerCollider.bounds.extents.y + extraHeight, groundLayer);
 
         // raycast
         Color rayColor = hit.collider != null ? Color.green : Color.red;
         Debug.DrawRay(playerCollider.bounds.center, Vector2.down * (playerCollider.bounds.extents.y + extraHeight), rayColor);
 
-       
+
         if (hit.collider != null)
         {
             Debug.Log("está tocando el suelo: " + hit.collider.gameObject.name);
@@ -78,19 +81,4 @@ public class PlayerController : MonoBehaviour
 
         return hit.collider != null;
     }
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
-    }*/
 }
