@@ -8,22 +8,25 @@ public class FoxController : MonoBehaviour
     public Animator animator;
     public float followDistance = 2f;
     public float walkDistance = 3f;
-    public float moveSpeed = 2f; // Velocidad de movimiento
-    public float jumpForce = 5f; // Fuerza de salto
-    public LayerMask groundLayer; // Capa de suelo para verificar si el acompañante está tocando el suelo
+    public float moveSpeed = 2f; 
+    public float jumpForce = 5f; 
+    public LayerMask groundLayer; 
 
-    private Rigidbody2D rb; // Referencia al Rigidbody2D del acompañante
-    private bool isGrounded; // Verifica si el acompañante está en el suelo
+    private Rigidbody2D rb; 
+    private bool isGrounded; 
+    public Transform groundCheck; 
+    public float groundCheckRadius = 0.2f; 
 
     void Start()
     {
-        // Obtener el Rigidbody2D del acompañante
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
+        // Verifica la distancia al jugador
         float distance = Vector3.Distance(transform.position, player.position);
 
         if (distance > walkDistance)
@@ -36,31 +39,30 @@ public class FoxController : MonoBehaviour
             animator.SetBool("Walking", false);
         }
 
-        // Lógica de salto
+       
         isGrounded = IsGrounded();
 
-        // Detectar si el acompañante debe saltar
+        // Si el jugador está saltando y el acompañante está en el suelo, hace el salto
         if (player.GetComponent<Rigidbody2D>().velocity.y > 0 && isGrounded)
         {
             animator.SetBool("IsJumping", true);
             Jump();
         }
-        else
+        else if (isGrounded)
         {
+            // Si está en el suelo y no está saltando, resetea la animación de salto
             animator.SetBool("IsJumping", false);
         }
 
-        /*// Lógica de muerte (dependerá de cómo implementes la muerte)
+        /*
         if (player.GetComponent<PlayerController>().isDead)
         {
             animator.SetTrigger("Die");
         }*/
     }
 
-    // Método para mover al acompañante hacia el jugador
     private void MoveToPlayer()
     {
-        // Solo se mueve si la distancia es mayor que la distancia de seguimiento
         if (Vector3.Distance(transform.position, player.position) > followDistance)
         {
             // Moverse hacia el jugador con una velocidad constante
@@ -84,27 +86,30 @@ public class FoxController : MonoBehaviour
     // Método para voltear al acompañante
     private void Flip(bool mirandoIzquierda)
     {
-        // Cambiar la escala del acompañante en el eje X
         Vector3 escala = transform.localScale;
         escala.x = mirandoIzquierda ? -Mathf.Abs(escala.x) : Mathf.Abs(escala.x);
         transform.localScale = escala;
     }
 
-    // Método para verificar si el acompañante está tocando el suelo
+    // Método para verificar si el acompañante está tocando el suelo utilizando el Ground Check
     private bool IsGrounded()
     {
-        // Usamos un "Raycast" hacia abajo para comprobar si el acompañante está en el suelo
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
-        return hit.collider != null;
+        // Verificamos si hay una colisión cerca del punto de Ground Check (un área circular).
+        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
-
-    // Método para hacer que el acompañante salte
     private void Jump()
     {
         if (isGrounded)
         {
-            // Aplicar la fuerza de salto hacia arriba
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
+    void OnDrawGizmos()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
 }

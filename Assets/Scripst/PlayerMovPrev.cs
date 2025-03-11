@@ -32,8 +32,6 @@ public class PlayerMovPrev : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
-
-    // Dibujar un círculo de comprobación de suelo en el editor (opcional)
     void OnDrawGizmos()
     {
         if (groundCheck != null)
