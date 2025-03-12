@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         isPaused = false;
-        Time.timeScale = 1;
+        Time.timeScale = 1;       
         AudioManager.Instance.PlayMusic("Theme");
     }
 

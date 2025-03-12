@@ -177,24 +177,22 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 1e172e85cb76a6b4b8f3825c248e238e, type: 2}
   musicSounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: eb6fe8c4affbe3b45b6bf8a810edc706, type: 3}
-  - name: DeadTheme
-    clip: {fileID: 8300000, guid: 93eff19d32e550642ad353f9d2c786d3, type: 3}
+    clip: {fileID: 8300000, guid: 2e291488465d32947b83e9ea3cb58303, type: 3}
   sfxSounds:
   - name: Button
-    clip: {fileID: 8300000, guid: f2304ef1532c03d4381a18a30587e109, type: 3}
-  - name: EnemyExplosion
-    clip: {fileID: 8300000, guid: 394ad78024a6acb4d8ca5afe93e8829d, type: 3}
-  - name: PlayerExplosion
-    clip: {fileID: 8300000, guid: 6d62e4f2c426d924686d4de8f4fb3d68, type: 3}
-  - name: PlayerShoot
-    clip: {fileID: 8300000, guid: 78a4186b37a6e0040a2874ef7a24c4a2, type: 3}
-  - name: MonsterShoot
-    clip: {fileID: 8300000, guid: 6b8298c61bd4dce49ac5ca17455274f2, type: 3}
-  - name: PlayerDamaged
-    clip: {fileID: 8300000, guid: 5129f7ab1feea39449dd3537eb5990fb, type: 3}
-  - name: Heal
-    clip: {fileID: 8300000, guid: 03210fe6625532e43a337cf33c61dd24, type: 3}
+    clip: {fileID: 8300000, guid: 938312b964de5c44fb5f3a216b5ee9f2, type: 3}
+  - name: HitSound
+    clip: {fileID: 8300000, guid: 1e544e8c97647a949b3bfe5326f9cdca, type: 3}
+  - name: LavaPop
+    clip: {fileID: 8300000, guid: 45ff9a227d150f946976d39f6afe3a73, type: 3}
+  - name: JumpSound
+    clip: {fileID: 8300000, guid: c85d293aca283164e998f9a8fe5efc92, type: 3}
+  - name: LoseSound
+    clip: {fileID: 8300000, guid: 9bb533c9a62636b4bb49c7ee1ef1b012, type: 3}
+  - name: LogSound
+    clip: {fileID: 8300000, guid: bdd2591d180c14445ad8a0ac75626386, type: 3}
+  - name: WinTheme
+    clip: {fileID: 8300000, guid: acdda3c881c6a5f48b968c9f824d05c4, type: 3}
   musicSource: {fileID: 2458156786081443534}
   sfxSource: {fileID: 7906626905785788102}
 --- !u!1 &6549091183112663063
@@ -239,7 +237,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7824477314248672517, guid: 1e172e85cb76a6b4b8f3825c248e238e, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2e291488465d32947b83e9ea3cb58303, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
