@@ -21,7 +21,7 @@ public class InstanceObject : MonoBehaviour
 
         if (countdownText != null)
         {
-            countdownText.text = "Tiempo restante: " + spawnDuration.ToString("F0") + "s"; // Mostrar el tiempo inicial
+            countdownText.text = "Time Remaining: " + spawnDuration.ToString("F0") + "s"; // Mostrar el tiempo inicial
         }
     }
 
@@ -58,7 +58,7 @@ public class InstanceObject : MonoBehaviour
             // Actualizar el texto del contador de tiempo
             if (countdownText != null)
             {
-                countdownText.text = "Tiempo restante: " + timeRemaining.ToString("F0") + "s";
+                countdownText.text = "Time Remaining: " + timeRemaining.ToString("F0") + "s";
             }
 
             yield return new WaitForSeconds(dropInterval); // Esperar antes de generar la siguiente gota
@@ -71,7 +71,7 @@ public class InstanceObject : MonoBehaviour
         // Asegurarse de que el contador diga que ha terminado
         if (countdownText != null)
         {
-            countdownText.text = "¡Oleada Terminada!";
+            countdownText.text = "Wave Completed!";
         }
     }
 

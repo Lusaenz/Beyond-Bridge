@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour
     public Image healthBar;  //imagen de la barra de vida
     public float maxHealth = 100f;
     private float currentHealth;
+    public GameObject icons;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class HealthBar : MonoBehaviour
         //SceneManager.LoadScene("GameOver");
         Debug.Log("Player muerto");
         GameManager.GameInstance.GameOverLose();
+        icons.SetActive(false);
         // pantalla de Game Over
     }
 
