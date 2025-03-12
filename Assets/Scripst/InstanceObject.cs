@@ -12,7 +12,7 @@ public class InstanceObject : MonoBehaviour
     public float dropSpeed = 5f;       // Velocidad a la que suben las gotas
     public GameObject objectSpawn, spawner;
     public TextMeshProUGUI countdownText; // Referencia al texto del contador de tiempo
-
+    public Animator wallAnimator;
     private bool triggered = false;
 
     private void Start()
@@ -34,6 +34,7 @@ public class InstanceObject : MonoBehaviour
         else if (other.CompareTag("Friend"))
         {
             objectSpawn.SetActive(true);
+            wallAnimator.SetTrigger("ActivateWall");
             StartCoroutine(SpawnObjectDrops());
         }
     }
@@ -42,7 +43,7 @@ public class InstanceObject : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        // Generar gotas durante un tiempo determinado 
+        // Generar gotas durante un tiempo determinado
         while (elapsedTime < spawnDuration)
         {
             SpawnObjectDrop();
@@ -65,8 +66,16 @@ public class InstanceObject : MonoBehaviour
         }
 
         // Finalizar la oleada
-        spawner.gameObject.SetActive(false);
-        objectSpawn.SetActive(false);
+        if (wallAnimator != null)
+        {
+            wallAnimator.SetTrigger("DesactivateWall"); // Asegúrate de que el trigger esté bien configurado en el Animator
+        }
+
+        // Agregar un pequeño retraso antes de desactivar el spawner
+        yield return new WaitForSeconds(0.2f);
+
+        spawner.gameObject.SetActive(false); // Desactivar el spawner
+        objectSpawn.SetActive(false); // Desactivar el objeto que genera las gotas
 
         // Asegurarse de que el contador diga que ha terminado
         if (countdownText != null)
@@ -74,6 +83,7 @@ public class InstanceObject : MonoBehaviour
             countdownText.text = "Wave Completed!";
         }
     }
+
 
     private void SpawnObjectDrop()
     {

@@ -8,22 +8,20 @@ public class FoxController : MonoBehaviour
     public Animator animator;
     public float followDistance = 2f;
     public float walkDistance = 3f;
-    public float moveSpeed = 2f; 
-    public float jumpForce = 5f; 
-    public LayerMask groundLayer; 
+    public float moveSpeed = 2f;
+    public float jumpForce = 5f;
+    public LayerMask groundLayer;
 
-    private Rigidbody2D rb; 
-    private bool isGrounded; 
-    public Transform groundCheck; 
-    public float groundCheckRadius = 0.2f; 
+    private Rigidbody2D rb;
+    private bool isGrounded;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
 
     void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
     }
 
-    
     void Update()
     {
         // Verifica la distancia al jugador
@@ -39,19 +37,18 @@ public class FoxController : MonoBehaviour
             animator.SetBool("Walking", false);
         }
 
-       
+        // Verifica si el acompañante está tocando el suelo
         isGrounded = IsGrounded();
 
-        // Si el jugador está saltando y el acompañante está en el suelo, hace el salto
-        if (player.GetComponent<Rigidbody2D>().velocity.y > 0 && isGrounded)
+        // Si el jugador presiona el botón de salto y el acompañante está en el suelo, hace el salto
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            animator.SetBool("IsJumping", true);
+            animator.SetBool("IsJumping", true);  // Activa la animación de salto
             Jump();
         }
-        else if (isGrounded)
+        else if (isGrounded && rb.velocity.y == 0) // Solo desactiva el salto cuando está tocando el suelo
         {
-            // Si está en el suelo y no está saltando, resetea la animación de salto
-            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsJumping", false); // Desactiva la animación de salto si está en el suelo
         }
 
         /*
@@ -98,7 +95,6 @@ public class FoxController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-   
     private void Jump()
     {
         if (isGrounded)
@@ -106,6 +102,7 @@ public class FoxController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
+
     void OnDrawGizmos()
     {
         if (groundCheck != null)
