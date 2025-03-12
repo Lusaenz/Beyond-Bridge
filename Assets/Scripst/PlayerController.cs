@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Debug.Log("Salto presionado");
+            AudioManager.Instance.PlaySFX("JumpSound");
             playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
             animator.SetBool("IsJumping", true);
         }

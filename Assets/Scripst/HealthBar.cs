@@ -41,11 +41,13 @@ public class HealthBar : MonoBehaviour
     {
         if (other.CompareTag("Fireball"))
         {
+            AudioManager.Instance.PlaySFX("HitSound");
             CameraController.Instance.MoverCam(1f, 2, 0.5f);
             TakeDamage(20f); // Reduce 20 de vida 
         }
         else if (other.CompareTag("Lava") || other.CompareTag("Spikes"))
         {
+            AudioManager.Instance.PlaySFX("HitSound");
             TakeDamage(maxHealth); // Muerte 
         }
     }
