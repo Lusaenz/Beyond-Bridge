@@ -1887,8 +1887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000021696, y: 0}
-  m_SizeDelta: {x: 0, y: 2120.0645}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.00019448517, y: 2491.94}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &666464048
 GameObject:
@@ -2810,7 +2810,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 975174548}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4171,7 +4171,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 895500420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7877423}
+  m_AnchorMin: {x: 0, y: 0.8528576}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 0}
@@ -4431,7 +4431,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1539547301}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.2122577
+  m_Size: 0.1471424
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5065,7 +5065,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 35}
-  m_SizeDelta: {x: 750, y: 450}
+  m_SizeDelta: {x: 750, y: 366.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649353512
 MonoBehaviour:
@@ -5841,7 +5841,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Group Members\n\nLuisa Saenz -> Gameplay Programmer - VFX\nFelipe Baquero
+    -> Gameplay Programmer - VFX\nCarlos Henao -> Game Designer \nDavid Ospina ->
+    UI - SFX programmer \n\nExternal Assets Used\r\n\r\n\r\nCHARACTER AND MAP TILESET
+    ART: \r\n\r\n- Jungle Asset Pack by Jesse Munguia, Link: https://jesse-m.itch.io/jungle-pack\r\n\r\n-
+    Sunny Land - Pixel Game Art Collection by ansimuz, Link: https://ansimuz.itch.io/sunny-land-pixel-game-art\r\n\r\n-
+    Cosmo Pixels - Top Down Lava Tileset - 16x16 by BeyonderBoy, Link: https://beyonderboy.itch.io/top-down-lava-tileset-16x16\r\n\n\r\nUI/UX\r\n\r\n-
+    Pixel Keyboard Keys - for UI by Dream Mix, Link: https://dreammix.itch.io/keyboard-keys-for-ui\r\n\r\n-
+    Pixel Art GUI Elements by Mounir Tohami, Link: https://mounirtohami.itch.io/pixel-art-gui-elements\r\n\r\n\r\nMUSIC\r\n\r\n-
+    Main Theme: Sequence - 8 bit music loop by michorvath, Link: https://freesound.org/people/michorvath/sounds/412343/\r\n\r\n-
+    Main Theme Ambience: forest calm NL MONO 04 200529_0181.mp3 by klankbeeld, Link:
+    https://freesound.org/people/klankbeeld/sounds/625584/\r\n\r\n- Game Over Win:
+    Piano Dream (loop ver.1) by AudioCoffee, Link: https://freesound.org/people/AudioCoffee/sounds/751136/\r\n\r\n\nSFX\r\n\r\n-
+    Walk: footstep4.wav by jtn191, Link: https://freesound.org/people/jtn191/sounds/514254/\r\n\r\n-
+    Jump: 8bit Jump by plasterbrain, Link: https://freesound.org/people/plasterbrain/sounds/399095/
+    \r\n\r\n- Damage: Hit_00 by LittleRobotSoundFactory, Link: https://freesound.org/people/LittleRobotSoundFactory/sounds/270327/
+    \r\n\r\n- Death: 8 bit Death sound by MentosLat, Link: https://freesound.org/people/MentosLat/sounds/417486/\n\n-
+    Lava Pop: Pop 1: https://freesound.org/people/quatricise/sounds/789790/\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5850,8 +5866,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281697241
-  m_fontColor: {r: 0.8509804, g: 0.5137255, b: 0.20784314, a: 1}
+    rgba: 4278588194
+  m_fontColor: {r: 0.13207549, g: 0.07490407, b: 0.02305091, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5868,8 +5884,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
