@@ -12,6 +12,17 @@ public class VolumeSettings : MonoBehaviour
     {
         LoadVolume(); // Cargar los valores guardados al iniciar
 
+        // Forzar a desmutear si está activado en PlayerPrefs
+        bool isMuted = PlayerPrefs.GetInt("isMuted", 0) == 1;
+        if (!isMuted)
+        {
+            AudioSource[] sources = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource source in sources)
+            {
+                source.mute = false;
+            }
+        }
+
         // Asegurar que los sliders reflejen los valores actuales
         if (musicSlider != null)
             musicSlider.onValueChanged.AddListener(delegate { SetMusicVolume(); });
@@ -26,7 +37,7 @@ public class VolumeSettings : MonoBehaviour
         audioMixer.SetFloat("music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
         PlayerPrefs.Save();
-    
+
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.ApplySavedVolumes();
@@ -46,8 +57,16 @@ public class VolumeSettings : MonoBehaviour
         }
     }
 
-    private void LoadVolume()
+    public void LoadVolume()
     {
+        bool isMuted = PlayerPrefs.GetInt("isMuted", 0) == 1;
+
+        AudioSource[] sources = FindObjectsOfType<AudioSource>();
+        for (int i = 0; i < sources.Length; i++)
+        {
+            sources[i].mute = isMuted;
+        }
+
         if (PlayerPrefs.HasKey("musicVolume"))
         {
             float musicVolume = PlayerPrefs.GetFloat("musicVolume");
@@ -71,5 +90,9 @@ public class VolumeSettings : MonoBehaviour
         {
             sources[i].mute = isMuted;
         }
+
+        // Guardar el estado en PlayerPrefs
+        PlayerPrefs.SetInt("isMuted", isMuted ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }
