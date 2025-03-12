@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class HealthBar : MonoBehaviour
 
     public void Die()
     {
+        //SceneManager.LoadScene("GameOver");
         Debug.Log("Player muerto");
         // pantalla de Game Over
     }
@@ -39,6 +41,7 @@ public class HealthBar : MonoBehaviour
     {
         if (other.CompareTag("Fireball"))
         {
+            CameraController.Instance.MoverCam(1f, 2, 0.5f);
             TakeDamage(20f); // Reduce 20 de vida 
         }
         else if (other.CompareTag("Lava") || other.CompareTag("Spikes"))

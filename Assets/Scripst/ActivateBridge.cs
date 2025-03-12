@@ -33,6 +33,11 @@ public class ActivateBridge : MonoBehaviour
         if (bridgeAnimator != null)
         {
             bridgeAnimator.SetTrigger("ActivateBridge");
+            CameraController.Instance.MoverCam(2f, 3, 0.9f);
+
+
         }
     }
+
+        
 }
