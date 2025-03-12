@@ -166,7 +166,7 @@ MonoBehaviour:
   jumpForce: 7
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
 --- !u!95 &2649848191007416421
 Animator:
   serializedVersion: 5

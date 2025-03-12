@@ -1,22 +1,39 @@
 using System.Collections;
+using TMPro; // Asegúrate de tener este namespace para usar TextMeshPro
 using UnityEngine;
 
 public class InstanceObject : MonoBehaviour
 {
-    public GameObject objectPrefab; 
+    public GameObject objectPrefab;
     public BoxCollider2D spawnRange;   // rango de aparición
     public float spawnY = 5f;          // Rango en el eje Y (constante o un valor fijo)
     public float dropInterval = 0.5f;  // Tiempo entre la aparición de gotas
     public float spawnDuration = 30f;  // Duración total de la oleada 
     public float dropSpeed = 5f;       // Velocidad a la que suben las gotas
+    public GameObject objectSpawn, spawner;
+    public TextMeshProUGUI countdownText; // Referencia al texto del contador de tiempo
 
     private bool triggered = false;
+
+    private void Start()
+    {
+        objectSpawn.SetActive(false);
+
+        if (countdownText != null)
+        {
+            countdownText.text = "Tiempo restante: " + spawnDuration.ToString("F0") + "s"; // Mostrar el tiempo inicial
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !triggered)
         {
             triggered = true;
+        }
+        else if (other.CompareTag("Friend"))
+        {
+            objectSpawn.SetActive(true);
             StartCoroutine(SpawnObjectDrops());
         }
     }
@@ -30,7 +47,25 @@ public class InstanceObject : MonoBehaviour
         {
             SpawnObjectDrop();
             elapsedTime += dropInterval; // Incrementar el tiempo transcurrido
+
+            // Actualizar el contador de tiempo
+            if (countdownText != null)
+            {
+                float timeRemaining = spawnDuration - elapsedTime;
+                countdownText.text = "Tiempo restante: " + timeRemaining.ToString("F0") + "s";
+            }
+
             yield return new WaitForSeconds(dropInterval); // Esperar antes de generar la siguiente gota
+        }
+
+        // Finalizar la oleada
+        spawner.gameObject.SetActive(false);
+        objectSpawn.SetActive(false);
+
+        // Asegurarse de que el contador diga que ha terminado
+        if (countdownText != null)
+        {
+            countdownText.text = "¡Oleada Terminada!";
         }
     }
 
@@ -63,4 +98,3 @@ public class InstanceObject : MonoBehaviour
         }
     }
 }
-
