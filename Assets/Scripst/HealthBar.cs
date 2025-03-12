@@ -37,6 +37,8 @@ public class HealthBar : MonoBehaviour
         Debug.Log("Player muerto");
         GameManager.GameInstance.GameOverLose();
         icons.SetActive(false);
+        AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.PlaySFX("LoseSound");
         // pantalla de Game Over
     }
 

@@ -84,6 +84,7 @@ public class InstanceObject : MonoBehaviour
             Vector2 spawnPosition = new Vector2(randomX, spawnY);
 
             // Instanciar la gota de objectPrefab en el punto de aparición aleatorio
+            AudioManager.Instance.PlaySFX("LavaPop");
             GameObject objDrop = Instantiate(objectPrefab, spawnPosition, Quaternion.identity);
             Debug.Log("Gota instanciada en: " + spawnPosition);
 

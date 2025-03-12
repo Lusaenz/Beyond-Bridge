@@ -34,7 +34,7 @@ public class ActivateBridge : MonoBehaviour
         {
             bridgeAnimator.SetTrigger("ActivateBridge");
             CameraController.Instance.MoverCam(2f, 3, 0.9f);
-
+            AudioManager.Instance.PlaySFX("LogSound");
 
         }
     }

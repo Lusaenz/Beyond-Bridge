@@ -2973,7 +2973,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
       propertyPath: sfxSounds.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
       propertyPath: musicSounds.Array.size
@@ -3006,6 +3006,22 @@ PrefabInstance:
     - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
       propertyPath: sfxSounds.Array.data[3].name
       value: JumpSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bb533c9a62636b4bb49c7ee1ef1b012, type: 3}
+    - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
+      propertyPath: sfxSounds.Array.data[4].name
+      value: LoseSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
+      propertyPath: sfxSounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bdd2591d180c14445ad8a0ac75626386, type: 3}
+    - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
+      propertyPath: sfxSounds.Array.data[5].name
+      value: LogSound
       objectReference: {fileID: 0}
     - target: {fileID: 1313775018468041375, guid: 6aa9426ece2a42b4a81567fd223e9950, type: 3}
       propertyPath: musicSounds.Array.data[0].clip
@@ -5874,9 +5890,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Group Members\n\nLuisa Saenz -> Gameplay Programmer - VFX\nFelipe Baquero
-    -> Gameplay Programmer - VFX\nCarlos Henao -> Game Designer \nDavid Ospina ->
-    UI - SFX programmer \n\nExternal Assets Used\r\n\r\n\r\nCHARACTER AND MAP TILESET
-    ART: \r\n\r\n- Jungle Asset Pack by Jesse Munguia, Link: https://jesse-m.itch.io/jungle-pack\r\n\r\n-
+    -> Gameplay Programmer - VFX\nCarlos Henao -> Game Designer - UI\nDavid Ospina
+    -> UI - SFX programmer \n\nExternal Assets Used\r\n\r\n\r\nCHARACTER AND MAP
+    TILESET ART\n\r\n- Jungle Asset Pack by Jesse Munguia, Link: https://jesse-m.itch.io/jungle-pack\r\n\r\n-
     Sunny Land - Pixel Game Art Collection by ansimuz, Link: https://ansimuz.itch.io/sunny-land-pixel-game-art\r\n\r\n-
     Cosmo Pixels - Top Down Lava Tileset - 16x16 by BeyonderBoy, Link: https://beyonderboy.itch.io/top-down-lava-tileset-16x16\r\n\n\r\nUI/UX\r\n\r\n-
     Pixel Keyboard Keys - for UI by Dream Mix, Link: https://dreammix.itch.io/keyboard-keys-for-ui\r\n\r\n-
