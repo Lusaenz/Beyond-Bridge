@@ -48,10 +48,16 @@ public class InstanceObject : MonoBehaviour
             SpawnObjectDrop();
             elapsedTime += dropInterval; // Incrementar el tiempo transcurrido
 
-            // Actualizar el contador de tiempo
+            // Calcular el tiempo restante y actualizar el contador
+            float timeRemaining = spawnDuration - elapsedTime;
+            if (timeRemaining < 0)
+            {
+                timeRemaining = 0; // Asegurarse de que no sea negativo
+            }
+
+            // Actualizar el texto del contador de tiempo
             if (countdownText != null)
             {
-                float timeRemaining = spawnDuration - elapsedTime;
                 countdownText.text = "Tiempo restante: " + timeRemaining.ToString("F0") + "s";
             }
 
