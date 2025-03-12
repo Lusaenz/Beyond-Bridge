@@ -35,6 +35,7 @@ public class UIControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
+            Debug.Log("Tecla P Presionada");
             GameManager.GameInstance.PauseGame();
             PauseCanvas.SetActive(GameManager.GameInstance.isPaused);
         }
