@@ -34,6 +34,7 @@ public class HealthBar : MonoBehaviour
     {
         //SceneManager.LoadScene("GameOver");
         Debug.Log("Player muerto");
+        GameManager.GameInstance.GameOverLose();
         // pantalla de Game Over
     }
 
@@ -49,6 +50,7 @@ public class HealthBar : MonoBehaviour
         {
             AudioManager.Instance.PlaySFX("HitSound");
             TakeDamage(maxHealth); // Muerte 
+            Die();
         }
     }
 }
