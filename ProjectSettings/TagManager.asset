@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Friend
+  - Spikes
+  - Lava
+  - Fireball
   layers:
   - Default
   - TransparentFX
