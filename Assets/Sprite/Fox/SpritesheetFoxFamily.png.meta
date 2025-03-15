@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: c36734ce8c2ccd649a91fcb4f2a16ecb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritesheetFoxFamily_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 352
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9728f6d34ffa1ff469782bb3b30805e7
+      internalID: 101587252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetFoxFamily_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 352
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0829cc9b97b8df45987eba7ae050700
+      internalID: -1909493434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetFoxFamily_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 352
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1a5b19da7f91846b636a88f01c6193
+      internalID: -2027845583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpritesheetFoxFamily_0: 101587252
+      SpritesheetFoxFamily_1: -1909493434
+      SpritesheetFoxFamily_10: 1292681181
+      SpritesheetFoxFamily_11: 1970511441
+      SpritesheetFoxFamily_12: -443551286
+      SpritesheetFoxFamily_13: 1595943977
+      SpritesheetFoxFamily_14: -138039030
+      SpritesheetFoxFamily_15: -1573212635
+      SpritesheetFoxFamily_16: 154734041
+      SpritesheetFoxFamily_17: 1176312413
+      SpritesheetFoxFamily_18: -975884100
+      SpritesheetFoxFamily_19: 352571782
+      SpritesheetFoxFamily_2: -2027845583
+      SpritesheetFoxFamily_20: 626721217
+      SpritesheetFoxFamily_21: -1519592464
+      SpritesheetFoxFamily_22: -1919635360
+      SpritesheetFoxFamily_23: -2143347947
+      SpritesheetFoxFamily_24: -1697956242
+      SpritesheetFoxFamily_25: -947621439
+      SpritesheetFoxFamily_26: 1114193172
+      SpritesheetFoxFamily_27: 263215048
+      SpritesheetFoxFamily_28: 1124903877
+      SpritesheetFoxFamily_29: -599686553
+      SpritesheetFoxFamily_3: 1485427915
+      SpritesheetFoxFamily_30: -895074059
+      SpritesheetFoxFamily_31: -860898556
+      SpritesheetFoxFamily_32: -220194266
+      SpritesheetFoxFamily_33: 1131472203
+      SpritesheetFoxFamily_34: -1104090686
+      SpritesheetFoxFamily_4: 251545734
+      SpritesheetFoxFamily_5: 392062530
+      SpritesheetFoxFamily_6: 1773417091
+      SpritesheetFoxFamily_7: 1467228196
+      SpritesheetFoxFamily_8: -1304842542
+      SpritesheetFoxFamily_9: -1951096396
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
